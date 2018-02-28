@@ -1,0 +1,36 @@
+header.header
+  a.header__logo(href="")
+    img(src="img/icons/logo.png", alt="")
+    span
+      | Оптимал
+      b авто
+  .header__phones
+    .header__phones_numbers
+      a.header__phones_main(href="tel:(044) 361-34-14") (044) 361-34-14
+      span.header__phones_all все номера
+        i.fa.fa-angle-down
+      .header__phones_popup
+        span.header__phones_popup-title Все номера телефонов
+        .header__phones_popup-content
+          a.header__phones_popup-line(href="tel:(050) 361-34-14")
+            span.header__phones_popup-oper vodafone
+            span.header__phones_popup-num.header__phones_popup-num--vodafone (050) 361-34-14
+          a.header__phones_popup-line(href="tel:(067) 361-34-14")
+            span.header__phones_popup-oper Киевстар
+            span.header__phones_popup-num.header__phones_popup-num--kievstar (067) 361-34-14
+          a.header__phones_popup-line(href="tel:(063) 361-34-14")
+            span.header__phones_popup-oper Lifecell
+            span.header__phones_popup-num.header__phones_popup-num--lifecell (063) 361-34-14
+    span.header__phones_getcall Заказать обратный звонок
+
+  .header__search
+    form.header__search_form(action="")
+      input.header__search_input(type="text" placeholder="... поиск запчастей")
+      input.header__search_submit(type="submit" value="")
+    span.header__search_vin Подбор по VIN-коду
+  .header__cart
+  .header__cab
+
+section.menu
+
+main.content

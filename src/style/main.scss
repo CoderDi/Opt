@@ -1,3 +1,261 @@
 @import "partials/fonts";
 @import "normalize";
-@import "partials/front";
+
+body {
+  background-color: #2b3841;
+}
+* {
+  font-family: 'Ubuntu', sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.header {
+  height: 74px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    display: flex;
+    height: 100%; 
+    width: 175px;
+    align-items: center;
+    background-color: #ffffff;
+    background-image: linear-gradient(41deg, #007b3d 0%, #63a002 100%);
+
+    & img {
+      display: block;
+      margin-right: 20px;
+    }
+    & span {
+      color: #ffffff;
+      font-family: 'Raleway';
+      font-size: 21px;
+      font-weight: 300;
+      letter-spacing: -0.4px;
+
+      & b {
+        display: block;
+        color: #ffffff;
+        font-size: 27px;
+        font-family: 'Raleway';
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 3.4px;
+      }
+    }
+  }
+
+  &__phones {
+    display: flex;
+    padding-top: 7px;
+    align-items: flex-start;
+
+    &_numbers {
+      position: relative;
+      text-align: right;
+    }
+    &_main {
+      display: block;
+      color: #ffffff;
+      font-family: "Open Sans";
+      font-size: 21px;
+      font-weight: 700;
+      padding-left: 40px;
+      letter-spacing: 0.33px;
+      background: url(../img/icons/phone.png) no-repeat center left;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    &_all {
+      color: #469513;
+      font-size: 12px;
+      font-weight: 700;
+      display: block;
+      cursor: pointer;
+      & i {
+        padding: 0 3px;
+        transition: .1s ease-in-out;
+      }
+      &--open {
+        color: #fefefd;
+        & i {
+          transform: rotate(-180deg);
+        }
+      }
+    }
+    &_popup {
+      position: absolute;
+      top: 125%;
+      top: calc(100% + 10px);
+      right: 0;
+      width: 235px;
+      box-shadow: -3px 0 38px rgba(0, 0, 0, 0.18);
+      border-radius: 4px;
+      padding: 5px;
+      box-sizing: border-box;
+      background-color: #63a002;
+      opacity: 0;
+      visibility: hidden;
+      transition: .2s ease-in-out;
+      &--open {
+        opacity: 1;
+        visibility: visible;
+      }
+      &:before {
+        position: absolute;
+        content: '';
+        top: -6px;
+        right: 5px;
+        width: 13px;
+        height: 13px;
+        transform: rotate(45deg);
+        background: #63a002;
+      }
+      &-title {
+        display: block;
+        color: #ffffff;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 20px;
+        padding-right: 5px;
+        padding-bottom: 5px;
+      }
+      &-content {
+        background-color: #ffffff;
+      }
+      &-line {
+        display: block;
+        border-bottom: 1px solid #dfdddd;
+        padding: 10px 13px 20px;
+        &:hover {
+          background-color: #f6f6f6;
+        }
+      }
+      &-oper {
+        color: #737374;
+        font-size: 12px;
+        font-weight: 300;
+      }
+      &-num {
+        display: block;
+        color: #2b3841;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 24px;
+        background: url(../img/icons/mobile-operators.png) no-repeat;
+        &--vodafone {
+          background-position: 0 4px;
+        }
+        &--kievstar {
+          background-position: 0 -73px;
+        }
+        &--lifecell {
+          background-position: 0 -154px;
+        }
+      }
+    }
+    &_getcall {
+      margin-top: 3px;
+      margin-left: 34px;
+      display: inline-block;
+      color: #6db003;
+      font-size: 14px;
+      font-weight: 700;
+      padding-bottom: 2px;
+      border-bottom: 1px dashed #5f9817;
+      cursor: pointer;
+      &:hover {
+        border-bottom: 1px solid transparent;
+      }
+    }
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+    &_form {
+      display: flex;
+      margin-right: 50px;
+    }
+    &_vin {
+      color: #fbf7f7;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 20px;
+      cursor: pointer;
+    }
+    &_input {
+      width: 210px;
+      height: 37px;
+      display: block;
+      margin-right: 7px;
+      text-align: right;
+      padding-right: 13px;
+      box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.11);
+      border-radius: 19px;
+      border: none;
+      box-sizing: border-box;
+      outline: none;
+      background-color: #f7f5f5;
+      color: #4c4949;
+      font-family: "Open Sans";
+      font-size: 12px;
+      font-weight: 400;
+    }
+    &_submit {
+      display: block;
+      box-sizing: border-box;
+      border: none;
+      outline: none;
+      width: 57px;
+      height: 37px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.26);
+      border-radius: 19px;
+      background-color: #f7f5f5;
+      background-image: url(../img/icons/search.png), linear-gradient(41deg, #007b3d 0%, #63a002 100%);
+      background-repeat: no-repeat;
+      background-position: center;
+      cursor: pointer;
+      &:hover {
+        background-image: url(../img/icons/search.png), linear-gradient(41deg, #63a002 0%, #007b3d 100%);
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.content {
+  padding-left: 175px;
+  background: #fff;
+  min-height: 80vh;
+}
+
+
+
+
+
+
+
+.menu {
+  position: absolute;
+  top: 74px;
+  left: 0;
+  width: 175px;
+  min-height: 100%;
+  box-shadow: inset -5px 0 15px rgba(0, 0, 0, 0.14);
+  background-color: #2b3841;
+}
