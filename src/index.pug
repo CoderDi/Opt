@@ -1,4 +1,8 @@
 extends _template/_default
 block content
   include _template/_header
-  include _template/_footer
+  .page
+    include _template/_menu
+    main.content
+      include _template/_front
+      include _template/_footer
