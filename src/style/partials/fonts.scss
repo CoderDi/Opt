@@ -1,9 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700|Roboto:300,400,500,700|Ubuntu:300,400,500,700&subset=cyrillic');
+
 @font-face {
-	font-family: 'Futura PT';
-	src: url('../fonts/FuturaPT-Light/FuturaPT-Light.eot');
-	src: url('../fonts/FuturaPT-Light/FuturaPT-Light.eot?iefix') format('eot'),
-			url('../fonts/FuturaPT-Light/FuturaPT-Light.woff') format('woff'),
-			url('../fonts/FuturaPT-Light/FuturaPT-Light.ttf') format('truetype');
-	font-weight: 300;
+	font-family: "Raleway";
+	src: url("../fonts/RalewayLight/RalewayLight.eot");
+	src: url("../fonts/RalewayLight/RalewayLight.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/RalewayLight/RalewayLight.woff") format("woff"),
+	url("../fonts/RalewayLight/RalewayLight.ttf") format("truetype");
 	font-style: normal;
+	font-weight: 300;
+}
+@font-face {
+	font-family: "Raleway";
+	src: url("../fonts/RalewayMedium/RalewayMedium.eot");
+	src: url("../fonts/RalewayMedium/RalewayMedium.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/RalewayMedium/RalewayMedium.woff") format("woff"),
+	url("../fonts/RalewayMedium/RalewayMedium.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 500;
+}
+@font-face {
+	font-family: "Raleway";
+	src: url("../fonts/RalewayBold/RalewayBold.eot");
+	src: url("../fonts/RalewayBold/RalewayBold.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/RalewayBold/RalewayBold.woff") format("woff"),
+	url("../fonts/RalewayBold/RalewayBold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: "Raleway";
+	src: url("../fonts/RalewayExtraBold/RalewayExtraBold.eot");
+	src: url("../fonts/RalewayExtraBold/RalewayExtraBold.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/RalewayExtraBold/RalewayExtraBold.woff") format("woff"),
+	url("../fonts/RalewayExtraBold/RalewayExtraBold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 800;
+}
+
+@font-face {
+	font-family: "Raleway";
+	src: url("../fonts/RalewayBlack/RalewayBlack.eot");
+	src: url("../fonts/RalewayBlack/RalewayBlack.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/RalewayBlack/RalewayBlack.woff") format("woff"),
+	url("../fonts/RalewayBlack/RalewayBlack.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 900;
 }
