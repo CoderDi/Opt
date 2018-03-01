@@ -27,7 +27,20 @@ header.header
     form.header__search_form(action="")
       input.header__search_input(type="text" placeholder="... поиск запчастей")
       input.header__search_submit(type="submit" value="")
-    span.header__search_vin Подбор по VIN-коду
+    .header__vin 
+      span.header__vin_span Подбор по VIN-коду
+      .header__vin_popup
+        .header__vin_popup-top
+          span.header__vin_title Для подбора запчастей по Вин-коду:
+          span.header__vin_subtitle Введите номер вин-код Вашего автомобиля в поле поиска
+        span.header__vin_subtitle или отправьте запрос нашему менеджеру
+        span.header__vin_btn Отправить запрос
+        .header__vin_popup-bottom
+          span.header__vin_popup-bottom_title Где взять ВИН-код:
+          .header__vin_popup-bottom_flex
+            img(src="img/udo.png", alt="")
+            span Вин-код отображен на водительских правах, на обороте с технческой информацией
+
   .header__btns
     .header__cart.header__btns_block
       .header__cart_container.header__btns_block--container
