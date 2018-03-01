@@ -29,8 +29,8 @@ header.header
       input.header__search_submit(type="submit" value="")
     span.header__search_vin Подбор по VIN-коду
   .header__btns
-    .header__cart
-      .header__cart_container
+    .header__cart.header__btns_block
+      .header__cart_container.header__btns_block--container
         i.fa.fa-shopping-cart.header__cart_icon
         span.header__cart_count 2
       .header__cart_popup
@@ -59,11 +59,31 @@ header.header
               span 228
               | грн
           a.header__cart_btn(href="") Начать оформление
-    .header__cab
-      i.fa.fa-sign-in.header__cab_icon.header__cab_in
-      span.header__cab_title Кабинет 
-      span.header__cab_name Константин Контантиновский
-      i.fa.fa-sign-out.header__cab_icon.header__cab_out
-      span.header__cab_count 99
+    .header__cab.header__btns_block
+      .header__cab_nologin.header__btns_block--container
+        i.fa.fa-sign-in.header__cab_icon.header__cab_in
+        span.header__cab_title Кабинет 
+      .header__cab_login
+        span.header__cab_name Константин Контантиновский
+        i.fa.fa-sign-out.header__cab_icon.header__cab_out
+        span.header__cab_count 99
+      .header__cab_popup
+        span.header__cab_popup-title Авторизация
+        .header__cab_popup-content
+          span.header__cab_popup-nonumber Указанный номер не был найден в нашей базе
+          span.header__cab_popup-caption Ваш номер телефона
+          form.header__cab_popup-form(action="")
+            .header__cab_popup-phone
+              span +38
+              input.header__cab_popup-input(type="tel" placeholder="(___) ___-__-__")
+            input.header__cab_popup-submit(type="submit" value="Отправить SMS")
+          .header__cab_popup-sms-block
+            span.header__cab_popup-nonumber Вы указали неверный код
+            span.header__cab_popup-caption Введите код из SMS
+            form.header__cab_popup-sms(action="")
+              input.header__cab_popup-input.header__cab_popup-input-sms(type="text" placeholder="")
+              input.header__cab_popup-submit(type="submit" value="Подтвердить")
+            span.header__cab_popup-sms-no Не пришла SMS? 
+            span.header__cab_popup-sms-no_btn Отправить еще раз
 
 

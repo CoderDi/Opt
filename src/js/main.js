@@ -7,4 +7,7 @@ $(document).ready(function() {
   $(".header__cart_container").click(function(){
     $(".header__cart_popup").toggleClass("header__cart_popup--open");
   });
+  $(".header__cab_nologin").click(function(){
+    $(".header__cab_popup").toggleClass("header__cab_popup--open");
+  });
 });
