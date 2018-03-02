@@ -73,21 +73,38 @@
           span.cart__item_sum
             span 264
             | грн
-
+      .cart__list_with-sale
+        .cart__list_with-sale_item
+          span Всего
+          span.cart__list_with-sale_price
+            span 384.00 
+            | грн
+        .cart__list_with-sale_item.cart__list_with-sale_item--sale
+          span Скидка
+          span.cart__list_with-sale_price
+            span 84.00 
+            | грн 
       .cart__list_all Всего к оплате
         b#resPrice 384.00 
         span грн
       .cart__list_sale
-        span.cart__list_sale_title У вас есть  скидочный купон 
-        .cart__list_sale_input
-        span.cart__list_sale_btn Пересчитать стоимость заказа
-          i.fa.fa-refresh
+        .cart__list_sale_flex
+          span.cart__list_sale_title У вас есть  скидочный купон 
+          .cart__list_sale_input.cart__list_sale_input--decline
+            input(type="text" placeholder="укажите скидочный код")
+          span.cart__list_sale_btn Пересчитать стоимость заказа
+            i.fa.fa-refresh
+        span.cart__list_sale_accept Скидочный купон принят
       .cart__list_btns
         span.cart__list_prev 
           i.fa.fa-long-arrow-left 
           | Вернуться к покупкам 
         span.cart__list_next Указать данные доставки
           i.fa.fa-long-arrow-right
+
+    .cart__deliv
+      
+  
   .cart__analog
     span.cart__analog_text Или оставьте ваш номер телефона 
       br
