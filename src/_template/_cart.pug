@@ -95,15 +95,168 @@
           span.cart__list_sale_btn Пересчитать стоимость заказа
             i.fa.fa-refresh
         span.cart__list_sale_accept Скидочный купон принят
-      .cart__list_btns
-        span.cart__list_prev 
-          i.fa.fa-long-arrow-left 
-          | Вернуться к покупкам 
-        span.cart__list_next Указать данные доставки
-          i.fa.fa-long-arrow-right
+      
 
     .cart__deliv
-      
+      span.cart__deliv_title Основные данные 
+      .cart__deliv_header
+        span Номер телефона
+        form.cart__analog_form(action="")
+          span +38  
+          input(type="text" placeholder="(___)-___-__-__")
+          button Перейти к оформлению
+            i.fa.fa-long-arrow-right
+      .cart__deliv_data
+        label.cart__deliv_data_item
+          span Ваше имя
+          div
+            input(type="text")
+        label.cart__deliv_data_item
+          span Фамилия
+          div
+            input(type="text")
+        label.cart__deliv_data_item
+          span E-mail
+          div
+            input.cart__deliv_input-error(type="text")
+            .cart__deliv_span-error Необходимо указать e-mail
+      span.cart__deliv_title Данные о доставке
+      .cart__deliv_data
+        label.cart__deliv_data_item
+          span Населенный пункт
+          select
+              option Киев
+        label.cart__deliv_check
+          input#deliv-pochta(type="radio" name="deliv" checked)
+          i.cart__deliv_check-custom
+          b Новая Почта
+          span Стоимость услуг по перевозке товара оплачивает клиент, согласно тарифам "Новой почты".
+        label.cart__deliv_check
+          input#deliv-cur(type="radio" name="deliv")
+          i.cart__deliv_check-custom
+          b Доставка курьером
+          span Бесплатная доставка по Киеву – до 3 рабочих дней. Доставка по Киеву за 1 рабочий день – 50 грн.  
+        span.cart__deliv_check-cur Курьерская доставка осуществляется до дома
+        .cart__deliv--cur
+          label.cart__deliv_data_item
+            span Улица
+            div
+              input(type="text")
+          label.cart__deliv_data_item
+            span Номер дома
+            div
+              input(type="text")
+          label.cart__deliv_data_item
+            span Примечания
+            div
+              textarea
+        .cart__deliv--pochta
+          label.cart__deliv_data_item
+            span Отделение
+            select
+              option Отделение 1
+          label.cart__deliv_data_item
+            span Примечания
+            div
+              textarea
+    .cart__pay
+      span.cart__deliv_title Основные данные
+      .cart__deliv_data
+        label.cart__deliv_check
+          input#deliv-pochta(type="radio" name="pay")
+          i.cart__deliv_check-custom
+          b Наличными курьеру
+        label.cart__deliv_check
+          input#deliv-cur(type="radio" name="pay" checked)
+          i.cart__deliv_check-custom
+          b На карту Приват банка
+        label.cart__deliv_check
+          input#deliv-cur(type="radio" name="pay")
+          i.cart__deliv_check-custom
+          b Безналичная оплата ТОВ
+        label.cart__deliv_check
+          input#deliv-cur(type="radio" name="pay")
+          i.cart__deliv_check-custom
+          b Webmoney (оплата производится только в гривнах) 
+    .cart__podtv
+      span.cart__deliv_title Ваш заказ
+      .cart__list_captions
+        span.cart__list_captions--tovar Товар
+        span.cart__list_captions--price Цена
+        span.cart__list_captions--count Кол-во
+        span.cart__list_captions--sum Сумма
+      .cart__item
+        .cart__item_container
+          img.cart__item_img(src="img/cart-item.jpg", alt="")
+          .cart__item_text
+            span.cart__item_name Воздушный фильтр для Honda CR-V Meyle 31-12 321 0018
+            span.cart__status.cart__status_in В наличии
+          span.cart__item_price
+            span 66
+            | грн
+          .cart__item_count
+            .cart__item_count-block
+              span.minus -
+              span.value 4
+              span.plus +
+          span.cart__item_sum
+            span 264
+            | грн
+
+      .cart__item
+        .cart__item_container
+          img.cart__item_img(src="img/cart-item.jpg", alt="")
+          .cart__item_text
+            span.cart__item_name Воздушный фильтр для Honda CR-V Meyle 31-12 321 0018
+            span.cart__status.cart__status_in В наличии
+          span.cart__item_price
+            span 66
+            | грн
+          .cart__item_count
+            .cart__item_count-block
+              span.minus -
+              span.value 4
+              span.plus +
+          span.cart__item_sum
+            span 264
+            | грн
+      span.cart__deliv_title Данные о доставке
+      .cart__deliv_data
+        label.cart__deliv_data_item
+          span Ваше имя
+          .cart__pay_text Василий 
+        label.cart__deliv_data_item
+          span Фамилия
+          .cart__pay_text
+        label.cart__deliv_data_item
+          span Номер телефона
+          .cart__pay_text +380 (93) 122-22-22  
+        label.cart__deliv_data_item
+          span E-mail
+          .cart__pay_text vasya@gmail.com 
+        label.cart__deliv_data_item
+          span Доставка
+          .cart__pay_text Доставка курьером, г. Киев, ул. Киевская д.154
+        label.cart__deliv_data_item
+          span Примечание
+          .cart__pay_text Заходить со двора дома 49
+      span.cart__deliv_title Способ оплаты
+      .cart__deliv_data.cart__deliv_data--last
+        .cart__pay_text На карту Приват банка 
+
+
+    .cart__list_btns
+      span.cart__list_prev 
+        i.fa.fa-long-arrow-left 
+        | Вернуться к покупкам 
+      span.cart__list_next Указать данные доставки
+        i.fa.fa-long-arrow-right
+
+  .cart__popup
+    i.fa.fa-check-circle-o
+    span.cart__popup_title Ваш заказ отправлен
+    span.cart__popup_text Спасибо, что обратились именно к нам. В ближайшее время с вами свяжется наш менеджер
+    a.cart__popup_btn(href="") На главную 
   
   .cart__analog
     span.cart__analog_text Или оставьте ваш номер телефона 
