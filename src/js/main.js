@@ -92,7 +92,8 @@ $(document).ready(function() {
   $(".item__favourite").click(function(){
     $(this).toggleClass("item__favourite--star");
   });
-
+  $(".js-tabs__area").hide();
+  $(".tabs__area-mark").show();
   $(".tabs__item").click(function(){
     $(this).addClass("tabs__item--active");
     $(".js-tabs__area").hide();
