@@ -4,19 +4,19 @@
       h1 Корзина: начало оформления заказа 
       span Номер заказа 123456
     .cart__steps
-      .cart__step.cart__step--list.cart__step--active
+      .cart__step.cart__step--list.cart__step--active(data-section=".cart__list")
         .cart__step_icon.cart__step_icon--list
         span.cart__step_text 1. Список запчастей
-      .cart__step.cart__step--deliv
+      .cart__step.cart__step--deliv(data-section=".cart__deliv")
         .cart__step_icon.cart__step_icon--deliv
         span.cart__step_text 2. Данные для доставки
-      .cart__step.cart__step--pay
+      .cart__step.cart__step--pay(data-section=".cart__pay")
         .cart__step_icon.cart__step_icon--pay
         span.cart__step_text 3. Способ оплаты
-      .cart__step.cart__step--podt
+      .cart__step.cart__step--podt(data-section=".cart__podtv")
         .cart__step_icon.cart__step_icon--podt
         span.cart__step_text 4. Подтверждение заказа
-    .cart__list
+    .cart--section.cart__list
       .cart__list_title
         span Список заказуемых запчастей
       .cart__list_captions
@@ -96,8 +96,7 @@
             i.fa.fa-refresh
         span.cart__list_sale_accept Скидочный купон принят
       
-
-    .cart__deliv
+    .cart--section.cart__deliv
       span.cart__deliv_title Основные данные 
       .cart__deliv_header
         span Номер телефона
@@ -159,7 +158,7 @@
             span Примечания
             div
               textarea
-    .cart__pay
+    .cart--section.cart__pay
       span.cart__deliv_title Основные данные
       .cart__deliv_data
         label.cart__deliv_check
@@ -178,7 +177,7 @@
           input#deliv-cur(type="radio" name="pay")
           i.cart__deliv_check-custom
           b Webmoney (оплата производится только в гривнах) 
-    .cart__podtv
+    .cart--section.cart__podtv
       span.cart__deliv_title Ваш заказ
       .cart__list_captions
         span.cart__list_captions--tovar Товар

@@ -1247,7 +1247,7 @@ a {
       font-size: 13px;
       font-weight: 400;
     }
-    &--active {
+    &.active {
       & .tabs__item_number {
         border: 1px solid #5f9817;
         background-color: #ffffff;
@@ -1288,9 +1288,11 @@ a {
             display: block;
           }
         }
-        &--active {
+        &.active {
           box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.13);
           background-color: #ffffff;
+          box-sizing: border-box;
+          border: 1px solid #007b3d;
         }
         span {
           position: absolute;
@@ -1343,7 +1345,7 @@ a {
           box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.1);
           background-color: rgba(2, 82, 116, 0.04);
         }
-        &--active {
+        &.active {
           box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.13);
           border: 1px solid #599c08;
           position: relative;
@@ -1393,7 +1395,7 @@ a {
         font-size: 14px;
         font-weight: 700;
         cursor: pointer;
-        &--active {
+        &.active {
           box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.13);
           border: 1px solid #599c08;
           position: relative;
@@ -1442,7 +1444,7 @@ a {
           height: 45px;
           margin-bottom: 20px;
         }
-        &--active {
+        &.active {
           box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.13);
           border: 1px solid #599c08;
           position: relative;
@@ -3771,13 +3773,262 @@ a {
   }
 }
 
-
+.header__search--mobile {
+  display: flex;
+  align-items: center;
+}
 
 
 
 @media screen and (max-width: 1400px) {
   .item--container {
     width: 33.333%;
+  }
+}
+
+
+@media screen and (max-width: 1320px) {
+  .footer__top {
+    padding: 35px 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .header__phones_numbers_mobile {
+    width: 18px;
+    height: 18px;
+    background: url(../img/icons/phone-white.png) no-repeat center;
+  }
+  .header__phones {
+    position: relative;
+    padding-top: 0;
+    padding-right: 10px;
+  }
+  .header__phones_numbers {
+    position: absolute;
+    z-index: 2;
+    top: 100%;
+    width: 320px;
+    left: -150px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.41);
+    background-color: #2b3841;
+    opacity: 0;
+    visibility: hidden;
+    box-sizing: border-box;
+    padding: 15px;
+    &--open {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  .header__phones_all {
+    display: none;
+  }
+  .header__phones_popup {
+    position: static;
+    background: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    &::before  {
+      display: none;
+    }
+    opacity: 1;
+    visibility: visible;
+  }
+  .tabs__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .tabs {
+    padding: 15px;
+  }
+  .header__phones_popup-title {
+    display: none;
+  }
+  .header__phones_popup-content {
+    background: none;
+  }
+  .header__phones_popup-oper {
+    display: none;
+  }
+  .header__phones_popup-num {
+    background: none;
+    color: #ffffff;
+  }
+  .header__phones_popup-line {
+    border: none;
+    padding-bottom: 0;
+  }
+  .header__phones_getcall {
+    display: none;
+  }
+  .header {
+    flex-wrap: wrap;
+  }
+  .header__logo {
+    width: 100%;
+    height: 37px;
+  }
+  .header__search--icon {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    background: url(../img/icons/search.png) no-repeat center;
+  }
+  .header__search {
+    position: relative;
+  }
+  .header__search_form {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .menu__butter {
+    width: 28px;
+    height: 28px;
+    flex-grow: 2;
+    background: url(../img/icons/butter.png) no-repeat 20px center;
+    cursor: pointer;
+  }
+  .page {
+    position: relative;
+  }
+  .menu {
+    position: absolute;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    width: 100%;
+    top: 0;
+    left: 0;
+    &--open {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  .header__cab_popup {
+    z-index: 2;
+  }
+  .header__phones_main {
+    padding-left: 0;
+    background: none;
+  }
+  .header__search--mobile {
+    position: absolute;
+    z-index: 2;
+    top: 100%;
+    opacity: 0;
+    visibility: hidden;
+    flex-wrap: wrap;
+    width: 320px;
+    left: -150px;
+    justify-content: center;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.41);
+    background-color: #2b3841;
+    padding: 15px;
+    &--open {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  .header__logo img {
+    height: 20px;
+    margin-right: 15px;
+  }
+  .header__btns {
+    height: 37px;
+  }
+  .header__cart_container {
+    width: 50px;
+  }
+  .header__cart_count {
+    top: 4px;
+    right: 4px;
+    width: 15px;
+    height: 15px;
+    font-size: 10px;
+    line-height: 15px;
+  }
+  .header__logo span {
+    font-size: 12px;
+    b {
+      font-size: 20px;
+      display: inline-block;
+      padding-left: 7px;
+      position: relative;
+      top: 3px;
+    }
+  }
+  .popular__category {
+    width: 100%;
+    padding: 15px;
+  }
+  .footer__bottom {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .footer__menu_item {
+    margin-left: 20px;
+  }
+  .footer__menu {
+    width: 100%;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+  }
+  .footer__phones {
+    padding: 0 10px 20px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .tabs__area_item, .tabs__area-model_item {
+    width: 25%;
+  }
+}
+
+
+@media screen and (max-width: 900px) {
+  .advantages__item {
+    width: 48%;
+    margin-bottom: 25px;
+  }
+  .tabs__area_item, .tabs__area-model_item {
+    width: 33.333%;
+  }
+  .popular {
+    padding: 15px;
+  }
+  .popular__title {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .advantages {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+
+@media screen and (max-width: 700px) {
+  .advantages__item {
+    width: 100%;
+  }
+  .popular__list {
+    flex-wrap: wrap;
+  }
+  .popular__list_block:first-child {
+    border: none;
+  }
+  .popular__btns {
+    padding: 15px 30px 0;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    a {
+      margin-bottom: 15px;
+    }
+  }
+  .popular__list_block {
+    width: 100%;
+    padding: 0 !important;
   }
 }
 

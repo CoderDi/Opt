@@ -4,7 +4,9 @@ header.header
     span
       | Оптимал
       b авто
+  .menu__butter
   .header__phones
+    .header__phones_numbers_mobile
     .header__phones_numbers
       a.header__phones_main(href="tel:(044) 361-34-14") (044) 361-34-14
       span.header__phones_all все номера
@@ -24,22 +26,24 @@ header.header
     span.header__phones_getcall Заказать обратный звонок
 
   .header__search
-    form.header__search_form(action="")
-      input.header__search_input(type="text" placeholder="... поиск запчастей")
-      input.header__search_submit(type="submit" value="")
-    .header__vin 
-      span.header__vin_span Подбор по VIN-коду
-      .header__vin_popup
-        .header__vin_popup-top
-          span.header__vin_title Для подбора запчастей по Вин-коду:
-          span.header__vin_subtitle Введите номер вин-код Вашего автомобиля в поле поиска
-        span.header__vin_subtitle или отправьте запрос нашему менеджеру
-        span.header__vin_btn Отправить запрос
-        .header__vin_popup-bottom
-          span.header__vin_popup-bottom_title Где взять ВИН-код:
-          .header__vin_popup-bottom_flex
-            img(src="img/udo.png", alt="")
-            span Вин-код отображен на водительских правах, на обороте с технческой информацией
+    .header__search--icon
+    .header__search--mobile
+      form.header__search_form(action="")
+        input.header__search_input(type="text" placeholder="... поиск запчастей")
+        input.header__search_submit(type="submit" value="")
+      .header__vin 
+        span.header__vin_span Подбор по VIN-коду
+        .header__vin_popup
+          .header__vin_popup-top
+            span.header__vin_title Для подбора запчастей по Вин-коду:
+            span.header__vin_subtitle Введите номер вин-код Вашего автомобиля в поле поиска
+          span.header__vin_subtitle или отправьте запрос нашему менеджеру
+          span.header__vin_btn Отправить запрос
+          .header__vin_popup-bottom
+            span.header__vin_popup-bottom_title Где взять ВИН-код:
+            .header__vin_popup-bottom_flex
+              img(src="img/udo.png", alt="")
+              span Вин-код отображен на водительских правах, на обороте с технческой информацией
 
   .header__btns
     .header__cart.header__btns_block

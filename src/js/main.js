@@ -93,6 +93,45 @@ $(document).ready(function() {
     $(this).toggleClass("item__favourite--star");
   });
 
+  $(".tabs__item").click(function(){
+    $(this).addClass("tabs__item--active");
+    $(".js-tabs__area").hide();
+    $($(this).attr("data-area")).show();
+  });
+
+  $(".js-tabs-item").click(function(){
+    $(this).parents(".js-tabs__area").find(".js-tabs-item").removeClass("active");
+    $(this).addClass("active");
+  });
+
+  $(".header__search--icon").click(function(){
+    $(".header__search--mobile").toggleClass("header__search--mobile--open");
+  });
+
+  $(".menu__butter").click(function(){
+    $(".menu").toggleClass("menu--open");
+  });
+  $(".header__phones_numbers_mobile").click(function(){
+    $(".header__phones_numbers").toggleClass("header__phones_numbers--open");
+  });
+
+  $(".cab--section").hide();
+  $(".cab__list").show();
+  $(".cab__btn").click(function(){
+    $(".cab__btn").removeClass("cab__btn--active");
+    $(this).addClass("cab__btn--active");
+    $(".cab--section").hide();
+    $($(this).attr("data-section")).show();
+  });
+
+  $(".cart--section").hide();
+  $(".cart__list").show();
+  $(".cart__step").click(function(){
+    $(".cart__step").removeClass("cart__step--active");
+    $(this).addClass("cart__step--active");
+    $(".cart--section").hide();
+    $($(this).attr("data-section")).show();
+  });
 
 
 

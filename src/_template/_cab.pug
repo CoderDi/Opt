@@ -7,16 +7,16 @@
       span.cab__breadcrumbs_span Кабинет клиента
     span.cab__block_title Кабинет клиента 
     .cab__btns
-      .cab__btn.cab__btn--mes.cab__btn--active
+      .cab__btn.cab__btn--mes.cab__btn--active(data-section=".cab__list")
         i
         span Уведомления
-      .cab__btn.cab__btn--history
+      .cab__btn.cab__btn--history(data-section=".cab__history")
         i
         span История заказов
-      .cab__btn.cab__btn--auto
+      .cab__btn.cab__btn--auto(data-section=".cab__garage")
         i
         span Мои автомобили
-      .cab__btn.cab__btn--data
+      .cab__btn.cab__btn--data(data-section=".cab__data")
         i
         span Личные данные
     .cab__links
@@ -25,7 +25,7 @@
       span.cab__link Понижение цены
       span.cab__link Акции и новости
         i.fa.fa-star-o
-    .cab__list
+    .cab--section.cab__list
       .cab__item
         .cab__item_icon
           i.fa.fa-shopping-cart 
@@ -98,7 +98,7 @@
 
       .cab__more-btn Показать еще 54 сообшения
   
-    .cab__history
+    .cab--section.cab__history
       table.cab__history_table
         tr
           th.cab__history_sortst Номер заказа 
@@ -134,7 +134,7 @@
           td 2005 Daihatsu Extol
       .cab__more-btn Еще заказы
 
-    .cab__garage
+    .cab--section.cab__garage
       .cab__garage_item
         .cab__garage_item_img
           .overflow
@@ -192,7 +192,7 @@
         a.cab__garage_item--getbtn(href="") Подобрать запчасти
           i.fa.fa-long-arrow-right
 
-    .cab__data
+    .cab--section.cab__data
       .cab__data_line
         span.cab__data_line_span Ваше имя
         .cab__data_line_input
