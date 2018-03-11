@@ -1,4 +1,34 @@
+function appen() {
+  if ($(window).width() <= 882) {
+    $('#tabs__item--container-mark').append( $('.tabs__area .tabs__area-mark') );
+    $('#tabs__item--container-year').append( $('.tabs__area .tabs__area-year') );
+    $('#tabs__item--container-model1').append( $('.tabs__area .tabs__area-model1') );
+    $('#tabs__item--container-body').append( $('.tabs__area .tabs__area-body') );
+    $('#tabs__item--container-dvig1').append( $('.tabs__area .tabs__area-dvig1') );
+    $('#tabs__item--container-modif').append( $('.tabs__area .tabs__area-modif') );
+    $('.news__block_mobile-title').append( $('.news__block_right .news__title, .news__block_right .news__label') );
+  } else {
+    $('.tabs__area').append( $('#tabs__item--container-mark .tabs__area-mark') );
+    $('.tabs__area').append( $('#tabs__item--container-year .tabs__area-year') );
+    $('.tabs__area').append( $('#tabs__item--container-model1 .tabs__area-model1') );
+    $('.tabs__area').append( $('#tabs__item--container-body .tabs__area-body') );
+    $('.tabs__area').append( $('#tabs__item--container-dvig1 .tabs__area-dvig1') );
+    $('.tabs__area').append( $('#tabs__item--container-modif .tabs__area-modif') );
+    $('.news__block_pc-title').append( $('.news__block_mobile-title .news__title, .news__block_mobile-title .news__label') );
+  }
+}
+
+
+
+$(window).resize(function(){
+  appen();
+});
 $(document).ready(function() {
+  appen();
+
+
+
+
   $(".header__phones_all").click(function(){
     $(this).toggleClass("header__phones_all--open");
     $(".header__phones_popup").toggleClass("header__phones_popup--open");
@@ -98,7 +128,16 @@ $(document).ready(function() {
     $(this).addClass("tabs__item--active");
     $(".js-tabs__area").hide();
     $($(this).attr("data-area")).show();
+
+    if ($(window).width() <= 882) {
+      var destination = $(this).offset().top;
+      $('html, body').animate({ scrollTop: destination }, 200);
+    }
   });
+
+
+
+
 
   $(".js-tabs-item").click(function(){
     $(this).parents(".js-tabs__area").find(".js-tabs-item").removeClass("active");
@@ -142,6 +181,10 @@ $(document).ready(function() {
     slidesToScroll: 2,
     prevArrow: "<i class='fa fa-long-arrow-left card__slider_btn card__slider_btn--prev'></i>",
     nextArrow: "<i class='fa fa-long-arrow-right card__slider_btn card__slider_btn--next'></i>"
+  });
+
+  $(".card__slider").on('afterChange', function(){
+    $(".card__slider_img img").attr('src', $('.slick-current.slick-active img').attr('src'));
   });
 });
 

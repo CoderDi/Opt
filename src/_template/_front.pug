@@ -19,24 +19,30 @@ section.tabs
       span.tabs__top_span2 Для удобства и скoрости поиска укажите автомобиль, для которого нужны запчасти
     .tabs__container
       .tabs__items
-        .tabs__item.tabs__item--active(data-area=".tabs__area-mark")
-          span.tabs__item_number 1
-          span.tabs__item_title Марка
-        .tabs__item(data-area=".tabs__area-year")
-          span.tabs__item_number 2
-          span.tabs__item_title Год выпуска
-        .tabs__item(data-area=".tabs__area-model1")
-          span.tabs__item_number 3
-          span.tabs__item_title Модель
-        .tabs__item(data-area=".tabs__area-body")
-          span.tabs__item_number 4
-          span.tabs__item_title Кузов
-        .tabs__item(data-area=".tabs__area-dvig1")
-          span.tabs__item_number 5
-          span.tabs__item_title Двигатель
-        .tabs__item(data-area=".tabs__area-modif")
-          span.tabs__item_number 6
-          span.tabs__item_title Модификация
+        .tabs__item--container#tabs__item--container-mark
+          .tabs__item.tabs__item--active(data-area=".tabs__area-mark")
+            span.tabs__item_number 1
+            span.tabs__item_title Марка
+        .tabs__item--container#tabs__item--container-year
+          .tabs__item(data-area=".tabs__area-year")
+            span.tabs__item_number 2
+            span.tabs__item_title Год выпуска
+        .tabs__item--container#tabs__item--container-model1
+          .tabs__item(data-area=".tabs__area-model1")
+            span.tabs__item_number 3
+            span.tabs__item_title Модель
+        .tabs__item--container#tabs__item--container-body
+          .tabs__item(data-area=".tabs__area-body")
+            span.tabs__item_number 4
+            span.tabs__item_title Кузов
+        .tabs__item--container#tabs__item--container-dvig1
+          .tabs__item(data-area=".tabs__area-dvig1")
+            span.tabs__item_number 5
+            span.tabs__item_title Двигатель
+        .tabs__item--container#tabs__item--container-modif
+          .tabs__item(data-area=".tabs__area-modif")
+            span.tabs__item_number 6
+            span.tabs__item_title Модификация
       .tabs__area
         .tabs__area-mark.js-tabs__area
           .tabs__area_container.tabs__area-mark--first
@@ -496,11 +502,13 @@ section.advantages
 section.news
   .news__block
     .news__block_left
+      .news__block_mobile-title
       img.news__img(src="img/news-img.jpg", alt="")
       p.news__text На каком бы автомобиле вы ни ездили, вам в любом случае периодически приходится сталкиваться с необходимостью проведения ремонта. Часть агрегатов и узлов подлежит плановому ремонту после определенного пробега, так как производитель при изготовления заложил в детали определённый ресурс. 
       p.news__text В любом случае вы не прогадаете, если не пойдете на авторынок или в фирменный сервис, а обратитесь в интернет магазин автозапчастей.
       p.news__text Некоторые элементы конструкции автомобиля приходится менять из-за износа, возникающего в процессе эксплуатации на наших дорогах. Также нередки случаи, когда необходимо купить автозапчасти для иномарок после дорожно-транспортных происшествий.
     .news__block_right
+      .news__block_pc-title
       h2.news__title Любые запчасти для вашего автомобиля
       a.news__label(href="")
         i.fa.fa-tags
