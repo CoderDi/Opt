@@ -87,6 +87,19 @@
               span.category__filter_label_text Herth+Buss
 
         .category__filter_block
+          span.category__filter_title Цена
+            i.fa.fa-caret-down
+          .category__filter_drop
+            .category__filter_flex
+              label.category__filter_flex-label
+                span от
+                input(type="text")
+              span -
+              label.category__filter_flex-label
+                span до
+                input(type="text")
+
+        .category__filter_block
           span.category__filter_title Вязкость по SAE
             i.fa.fa-caret-down
           .category__filter_drop
@@ -137,16 +150,17 @@
           .category__sort_btns
             i.fa.fa-th.category__sort_btns-list
             i.fa.fa-list.category__sort_btns-line
-        .category__list
+        .category__list.lines
           .item--container
             .item
               .item__img
                 img(src="img/list-item.png", alt="")
                 .item__sale -20%
-                .item__favourite 
-                  i.fa.fa-star-o
-                  i.fa.fa-star
+                
               .item__title Воздушный фильтр для Honda CR-V Meyle 31-12 321 0018
+              .item__favourite 
+                i.fa.fa-star-o
+                i.fa.fa-star
               .item__price
                 span.item__price_value
                   span 1258.00
@@ -165,10 +179,11 @@
               .item__img
                 img(src="img/list-item.png", alt="")
                 .item__sale -20%
-                .item__favourite 
-                  i.fa.fa-star-o
-                  i.fa.fa-star
+                
               .item__title Воздушный фильтр для Honda CR-V Meyle 31-12 321 0018
+              .item__favourite 
+                i.fa.fa-star-o
+                i.fa.fa-star
               .item__price
                 span.item__price_value
                   span 1258.00
