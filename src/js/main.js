@@ -186,6 +186,18 @@ $(document).ready(function() {
   $(".card__slider").on('afterChange', function(){
     $(".card__slider_img img").attr('src', $('.slick-current.slick-active img').attr('src'));
   });
+
+  $(".category__sort_btns-list").click(function(){
+    $(".category__list").removeClass("lines");
+    $(this).addClass("category__sort_btns--active");
+    $(".category__sort_btns-line").removeClass("category__sort_btns--active");
+  });
+  $(".category__sort_btns-line").click(function(){
+    $(".category__list").addClass("lines");
+    $(this).addClass("category__sort_btns--active");
+    $(".category__sort_btns-list").removeClass("category__sort_btns--active");
+  });
+
 });
 
 

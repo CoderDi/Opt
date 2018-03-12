@@ -3074,7 +3074,7 @@ a {
         cursor: pointer;
         font-size: 24px;
         font-weight: 400;
-        &:hover {
+        &:hover, &.category__sort_btns--active {
           background-color: #26333c;
           color: #63a002;
         }
