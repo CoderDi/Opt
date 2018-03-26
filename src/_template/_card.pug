@@ -155,7 +155,7 @@
               | (Германия)
             img(src="img/icons/germany.png", alt="")
           p.card__about_text по словам специалистов немецкой компании Wulf Gaertner Autoparts AG, выпускающей запчасти под маркой MEYLE, это лишь «хорошее китайское качество». Да, можно взять рекомендованные материалы и изготовить деталь в точном соответствии с оригинальным чертежом. Но будет ли она работать так, как надо? Не факт – потому что технология изготовления должна придать сырью, из которого деталь производится, такие свойства, которые обеспечат ее надежность в реальных условиях эксплуатации
-          a.card__about_more(href="") 
+          a.card__about_more.js-more-proiz
             span Больше информации о производителе
             i.fa.fa-long-arrow-right
         .card__about_block
@@ -173,7 +173,7 @@
             tr
               td Длина
               td 200 мм
-          a.card__about_more(href="") 
+          a.card__about_more.js-tth-open 
             span все характеристики
             i.fa.fa-long-arrow-right
 
@@ -197,49 +197,92 @@
   span.card__login_text Константиновский Николай
   button.card__login_btn Выйти
 
-.card__add-cart
-  span.card__add-cart_close
-    i.fa.fa-times
-  span.card__add-cart_title Товар добавлен в корзину
-  .card__add-cart_content
-    .cart__list_captions
-      span.cart__list_captions--tovar Товар
-      span.cart__list_captions--price Цена
-      span.cart__list_captions--count Кол-во
-      span.cart__list_captions--sum Сумма
-    .cart__item
-      .cart__item_rem-mes
-        span Товар Масляный фильтр  NIPPARTS - J1310500 удален из списка товаров
-        span.cart__item_rem-mes_reset Отменить удаление 
-          span (5...)
-      .cart__item_container
-        span.cart__item_delete
-          span.cart__item_delete--tip Удалить из списка
-          i.fa.fa-times
-        img.cart__item_img(src="img/cart-item.jpg", alt="")
-        .cart__item_text
-          span.cart__item_name Воздушный фильтр для Honda CR-V Meyle 31-12 321 0018
-          span.cart__status.cart__status_in В наличии
-        span.cart__item_price
-          span 66
-          | грн
-        .cart__item_count
-          .cart__item_count-block
-            span.minus -
-            span.value 4
-            span.plus +
-        span.cart__item_sum
-          span 264
-          | грн
-    .cart__list_all Всего к оплате
-      b#resPrice 384.00 
-      span грн
-  .cart__list_btns
-    span.cart__list_prev 
-      i.fa.fa-long-arrow-left 
-      | Вернуться к покупкам 
-    span.cart__list_next Начать оформление заказа
-      i.fa.fa-long-arrow-right
+
+.popup#js-add-cart
+  .popup-bg
+  .popup-content
+    .card__add-cart
+      span.card__add-cart_close.popup-close
+        i.fa.fa-times
+      span.card__add-cart_title Товар добавлен в корзину
+      .card__add-cart_content
+        .cart__list_captions
+          span.cart__list_captions--tovar Товар
+          span.cart__list_captions--price Цена
+          span.cart__list_captions--count Кол-во
+          span.cart__list_captions--sum Сумма
+        .cart__item
+          .cart__item_rem-mes
+            span Товар Масляный фильтр  NIPPARTS - J1310500 удален из списка товаров
+            span.cart__item_rem-mes_reset Отменить удаление 
+              span (5...)
+          .cart__item_container
+            span.cart__item_delete
+              span.cart__item_delete--tip Удалить из списка
+              i.fa.fa-times
+            img.cart__item_img(src="img/cart-item.jpg", alt="")
+            .cart__item_text
+              span.cart__item_name Воздушный фильтр для Honda CR-V Meyle 31-12 321 0018
+              span.cart__status.cart__status_in В наличии
+            span.cart__item_price
+              span 66
+              | грн
+            .cart__item_count
+              .cart__item_count-block
+                span.minus -
+                span.value 4
+                span.plus +
+            span.cart__item_sum
+              span 264
+              | грн
+        .cart__list_all Всего к оплате
+          b#resPrice 384.00 
+          span грн
+      .cart__list_btns
+        span.cart__list_prev 
+          i.fa.fa-long-arrow-left 
+          | Вернуться к покупкам 
+        span.cart__list_next Начать оформление заказа
+          i.fa.fa-long-arrow-right
+
+.popup#js-tth
+  .popup-bg
+  .popup-content
+    .card__add-cart.more-pro-popup
+      span.card__add-cart_close.popup-close
+        i.fa.fa-times
+      span.card__about_title Описание и характеристики
+      table.card__about_table
+        tr
+          td Исполнение фильтра
+          td Фильтр-патрон
+        tr
+          td Высота
+          td 50 мм
+        tr
+          td Ширина
+          td 194 мм
+        tr
+          td Длина
+          td 200 мм
+
+.popup#js-more-pro
+  .popup-bg
+  .popup-content
+    .card__add-cart.more-pro-popup
+      span.card__add-cart_close.popup-close
+        i.fa.fa-times
+      .card__about_caption
+        img(src="img/icons/meile.png", alt="")
+        span 
+          b MEYLE 
+          | (Германия)
+        img(src="img/icons/germany.png", alt="")
+      .more-pro-popup-text
+        p.card__about_text по словам специалистов немецкой компании Wulf Gaertner Autoparts AG, выпускающей запчасти под маркой MEYLE, это лишь «хорошее китайское качество». Да, можно взять рекомендованные материалы и изготовить деталь в точном соответствии с оригинальным чертежом. Но будет ли она работать так, как надо? Не факт – потому что технология изготовления должна придать сырью, из которого деталь производится, такие свойства, которые обеспечат ее надежность в реальных условиях эксплуатации
+        p.card__about_text по словам специалистов немецкой компании Wulf Gaertner Autoparts AG, выпускающей запчасти под маркой MEYLE, это лишь «хорошее китайское качество». Да, можно взять рекомендованные материалы и изготовить деталь в точном соответствии с оригинальным чертежом. Но будет ли она работать так, как надо? Не факт – потому что технология изготовления должна придать сырью, из которого деталь производится, такие свойства, которые обеспечат ее надежность в реальных условиях эксплуатации
+        p.card__about_text по словам специалистов немецкой компании Wulf Gaertner Autoparts AG, выпускающей запчасти под маркой MEYLE, это лишь «хорошее китайское качество». Да, можно взять рекомендованные материалы и изготовить деталь в точном соответствии с оригинальным чертежом. Но будет ли она работать так, как надо? Не факт – потому что технология изготовления должна придать сырью, из которого деталь производится, такие свойства, которые обеспечат ее надежность в реальных условиях эксплуатации
+          
 
 
 .cab__analog

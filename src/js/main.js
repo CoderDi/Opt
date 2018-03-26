@@ -34,6 +34,73 @@ $(document).ready(function() {
     $(".header__phones_popup").toggleClass("header__phones_popup--open");
   });
 
+  $(".js-get-sms").click(function(){
+    if ($("#sms-input").val() == "123") {
+      $("#no-number").show();
+    } else {
+      $("#form-get-sms").hide();
+      $("#no-number").hide();
+      $("#get-sms-caption").hide();
+      $("#sms-form").show();
+    }
+  });
+  $(".js-get-code").click(function(){
+    if ($("#code-input").val() == "123") {
+      $("#no-code").show();
+    } else {
+      $(".header__cab_popup").removeClass("header__cab_popup--open");
+      $("#no-code").hide();
+      $("#form-get-sms").show();
+      $("#get-sms-caption").show();
+      $("#sms-form").hide();
+      $(".header__cab_nologin").hide();
+      $(".header__cab_login").css("display", "flex");      
+    }
+  });
+  
+  $(".cab__history_table-link").click(function(){
+    $(".js-history-table").hide();
+    $(".js-cab-zakaz").show();
+    $("#js-more-cab").hide();
+  });
+  $("#js-cab-back").click(function(){
+    $(".js-history-table").show();
+    $(".js-cab-zakaz").hide();
+    $("#js-more-cab").show();
+  });
+  $(".item__favourite").click(function(){
+    $(".menu__item_favourite").css("display", "flex");
+    $(".menu__favourite_popup").addClass("menu__favourite_popup-open");
+  });
+  $(".menu__favourite_popup_btn").click(function(){
+    $(".menu__favourite_popup").removeClass("menu__favourite_popup-open");
+  });
+
+  $(".js-more-proiz").click(function(){
+    $("#js-more-pro").addClass("popup-show");
+  });
+  $(".js-tth-open").click(function(){
+    $("#js-tth").addClass("popup-show");
+  });
+
+  $(".card__slider_cart").click(function(){
+    $("#js-add-cart").addClass("popup-show");
+  });
+  $(".js-tocart").click(function(){
+    $("#js-add-cart").addClass("popup-show");
+  });
+  $(".popup-bg").click(function(){
+    $(".popup").removeClass("popup-show");
+  });
+  $(".popup-close").click(function(){
+    $(".popup").removeClass("popup-show");
+  });
+
+  $(".header__cab_out").click(function(){
+    $(".header__cab_login").css("display", "none");
+    $(".header__cab_nologin").css("display", "flex");
+  });
+
   $(".header__cart_container").click(function(){
     $(".header__cart_popup").toggleClass("header__cart_popup--open");
   });
@@ -197,6 +264,24 @@ $(document).ready(function() {
     $(this).addClass("category__sort_btns--active");
     $(".category__sort_btns-list").removeClass("category__sort_btns--active");
   });
+  
+  var i = 2;
+
+  $("body").on("click", ".vin-page-block-line-remove", function(){
+    $(this).parent(".vin-page-block-line").css("display", "none");
+    i--;
+  });
+
+  
+  $(".vin-page-block-line-add").click(function() {
+    $("<div class='vin-page-block-line'>" + i + "<label class='cart__deliv_data_item'><input type='text'></label>Кол-во<label class='cart__deliv_data_item'> <input type='text'></label><div class='vin-page-block-line-remove'><i class='fa fa-times'></i></div></div>").fadeIn('slow').appendTo($(this).parents('.vin-page-block-left').find('.vin-page-block-left-lines'));
+    i++;
+  });
+
+  $(".filter__block_title").click(function(){
+    $(this).parents(".filter__block").find(".filter__block_content").toggleClass("filter__block_content--open");
+  });
+
 
 });
 

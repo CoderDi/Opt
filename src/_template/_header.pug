@@ -83,25 +83,27 @@ header.header
         i.fa.fa-sign-in.header__cab_icon.header__cab_in
         span.header__cab_title Кабинет 
       .header__cab_login
+        .user-img
+          img(src="img/icons/delivery-active.png", alt="")
         span.header__cab_name Константин Контантиновский
         i.fa.fa-sign-out.header__cab_icon.header__cab_out
         span.header__cab_count 99
       .header__cab_popup
         span.header__cab_popup-title Авторизация
         .header__cab_popup-content
-          span.header__cab_popup-nonumber Указанный номер не был найден в нашей базе
-          span.header__cab_popup-caption Ваш номер телефона
-          form.header__cab_popup-form(action="")
+          .header__cab_popup-nonumber#no-number Указанный номер не был найден в нашей базе
+          span.header__cab_popup-caption#get-sms-caption Ваш номер телефона
+          form.header__cab_popup-form#form-get-sms(action="")
             .header__cab_popup-phone
               span +38
-              input.header__cab_popup-input(type="tel" placeholder="(___) ___-__-__")
-            input.header__cab_popup-submit(type="submit" value="Отправить SMS")
-          .header__cab_popup-sms-block
-            span.header__cab_popup-nonumber Вы указали неверный код
+              input.header__cab_popup-input#sms-input(type="tel" placeholder="(___) ___-__-__")
+            .header__cab_popup-submit.js-get-sms Отправить SMS
+          .header__cab_popup-sms-block#sms-form
+            .header__cab_popup-nonumber#no-code Вы указали неверный код
             span.header__cab_popup-caption Введите код из SMS
             form.header__cab_popup-sms(action="")
-              input.header__cab_popup-input.header__cab_popup-input-sms(type="text" placeholder="")
-              input.header__cab_popup-submit(type="submit" value="Подтвердить")
+              input.header__cab_popup-input.header__cab_popup-input-sms#code-input(type="text" placeholder="")
+              .header__cab_popup-submit.js-get-code Подтвердить
             span.header__cab_popup-sms-no Не пришла SMS? 
             span.header__cab_popup-sms-no_btn Отправить еще раз
 

@@ -1,0 +1,101 @@
+.cart
+  .cart__block
+    .cab__breadcrumbs
+      a.cab__breadcrumbs_link.cab__breadcrumbs_link--prev(href="") 
+        i.fa.fa-long-arrow-left
+        | Назад
+      a.cab__breadcrumbs_link(href="")
+        i.fa.fa-home
+        span Главная
+      span.cab__breadcrumbs_span Подбор запчастей по VIN-коду
+    .category__title
+      span.category__title_span Форма запроса поиска запчастей по VIN-коду
+    .vin--section
+      .cart__deliv_data
+        label.cart__deliv_data_item
+          span Ваше имя
+          div
+            input(type="text")
+        label.cart__deliv_data_item
+          span Номер телефона
+          .cart__analog_form(style="width: auto; margin: 0;")
+            span +38  
+            input(type="text" placeholder="(___)-___-__-__")
+       
+      span.cart__deliv_title Данные об автомобиле
+      .cart__deliv_data.vin-page-block
+        .vin-page-block-left
+          label.cart__deliv_data_item
+            span Номер кузова (VIN-код)
+            div
+              input(type="text")
+          label.cart__deliv_data_item
+            span Марка
+            select
+                option Киев
+          label.cart__deliv_data_item
+            span Модель/серия
+            div
+              input(type="text")
+          label.cart__deliv_data_item
+            span Год выпуска
+            .cart__analog_form.vin-page-input
+              input(type="text")
+              | /
+              select
+                  option 2017
+                  option 2016
+        .vin-page-block-right
+          span.vin-page-block-right-title Что такое VIN-код?
+          p.vin-page-block-right-text VIN (Vehicle Identification Number) - Номер шаси (кузова, рамы), всегда 17 символов. VIN код указан в тех паспорте Вашего автомобиля. На изображении ниже приведен пример VIN кода, указаного в тех паспорте автомобиля KIA CEED:
+          .vin-page-block-right-img
+            img(src="img/udo.png", alt="")
+
+      span.cart__deliv_title Необходимые запчасти 
+      .cart__deliv_data.vin-page-block
+        .vin-page-block-left
+          .vin-page-block-left-lines
+            .vin-page-block-line
+              | 1
+              label.cart__deliv_data_item
+                input(type="text")
+              | Кол-во 
+              label.cart__deliv_data_item
+                input(type="text")
+              .vin-page-block-line-remove
+                i.fa.fa-times
+          .vin-page-block-line-add Добавить строку
+        .vin-page-block-right
+          span.vin-page-block-right-title Как правильно описывать нужные запчасти
+          p.vin-page-block-right-text Опишите подробно заказываемые запчасти, каждую деталь нужно вводить отдельно в новой строке. В строке должна быть только одна деталь. 
+            br
+            span.green Правильно: 
+            | амортизатор передний правый. 
+            br
+            span.red Неправильно: 
+            | амортизатор
+       
+
+    .cart__list_btns
+      span.cart__list_prev 
+        i.fa.fa-long-arrow-left 
+        | Вернуться к покупкам 
+      span.cart__list_next Указать данные доставки
+        i.fa.fa-long-arrow-right
+
+  .cart__popup
+    i.fa.fa-check-circle-o
+    span.cart__popup_title Ваш запрос отправлен
+    span.cart__popup_text Спасибо, что обратились именно к нам. В ближайшее время с вами свяжется наш менеджер
+    a.cart__popup_btn(href="") На главную 
+  
+  .cart__analog
+    span.cart__analog_text Или оставьте ваш номер телефона 
+      br
+      | и менеджер с вами свяжется
+    form.cart__analog_form(action="")
+      span +38  
+      input(type="text" placeholder="(___)-___-__-__")
+      input(type="submit")
+
+

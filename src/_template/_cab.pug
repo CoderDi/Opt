@@ -99,40 +99,84 @@
       .cab__more-btn Показать еще 54 сообшения
   
     .cab--section.cab__history
-      table.cab__history_table
-        tr
-          th.cab__history_sortst Номер заказа 
-            i.fa.fa-sort-desc
-          th Дата
-            i.fa.fa-sort-desc
-          th Сумма заказа
-            i.fa.fa-sort-desc
-          th Статус заказа
-            i.fa.fa-sort-desc
-          th Авто
-            i.fa.fa-sort-desc
-        tr
-          td
-            a.cab__history_table-link(href="") 012345
-          td 15.12.2017
-          td 12300,00 грн
-          td Доставлено
-          td 2005 Daihatsu Extol
-        tr
-          td
-            a.cab__history_table-link(href="") 012344
-          td 13.12.2017
-          td 12300,00 грн
-          td Доставлено
-          td 2005 Daihatsu Extol
-        tr
-          td
-            a.cab__history_table-link(href="") 012343
-          td 13.12.2017
-          td 12300,00 грн
-          td Доставлено
-          td 2005 Daihatsu Extol
-      .cab__more-btn Еще заказы
+      .js-history-table
+        table.cab__history_table
+          tr
+            th.cab__history_sortst Номер заказа 
+              i.fa.fa-sort-desc
+            th Дата
+              i.fa.fa-sort-desc
+            th Сумма заказа
+              i.fa.fa-sort-desc
+            th Статус заказа
+              i.fa.fa-sort-desc
+            th Авто
+              i.fa.fa-sort-desc
+          tr
+            td
+              a.cab__history_table-link 012345
+            td 15.12.2017
+            td 12300,00 грн
+            td Доставлено
+            td 2005 Daihatsu Extol
+          tr
+            td
+              a.cab__history_table-link 012344
+            td 13.12.2017
+            td 12300,00 грн
+            td Доставлено
+            td 2005 Daihatsu Extol
+          tr
+            td
+              a.cab__history_table-link 012343
+            td 13.12.2017
+            td 12300,00 грн
+            td Доставлено
+            td 2005 Daihatsu Extol
+      .cart--section.js-cab-zakaz
+        .cart__list_title
+          span Заказ №012345
+        .cart__list_captions
+          span.cart__list_captions--tovar Товар
+          span.cart__list_captions--price Цена
+          span.cart__list_captions--count Кол-во
+          span.cart__list_captions--sum Сумма
+        .cart__item
+          .cart__item_container
+            span.cart__item_delete
+            img.cart__item_img(src="img/cart-item.jpg", alt="")
+            .cart__item_text
+              span.cart__item_name Воздушный фильтр для Honda CR-V Meyle 31-12 321 0018
+              span.cart__status.cart__status_in В наличии
+            span.cart__item_price
+              span 66
+              | грн
+            .cart__item_count 4 шт
+            span.cart__item_sum
+              span 264
+              | грн
+
+        .cart__item
+          .cart__item_container
+            span.cart__item_delete
+            img.cart__item_img(src="img/cart-item.jpg", alt="")
+            .cart__item_text
+              span.cart__item_name Воздушный фильтр для Honda CR-V Meyle 31-12 321 0018
+              span.cart__status.cart__status_in В наличии
+            span.cart__item_price
+              span 66
+              | грн
+            .cart__item_count 4 шт
+            span.cart__item_sum
+              span 264
+              | грн
+        .cart__list_all Всего к оплате
+          b#resPrice 384.00 
+          span грн
+          .cab__more-btn#js-cab-back Назад
+
+        
+      .cab__more-btn#js-more-cab Еще заказы
 
     .cab--section.cab__garage
       .cab__garage_item
